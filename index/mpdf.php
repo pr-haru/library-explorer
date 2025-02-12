@@ -8,15 +8,13 @@ $htmlFilePath = '../view/index.html';
 
 // ファイルの内容を読み込む
 $htmlContent = file_get_contents($htmlFilePath);
-$stylesheet = file_get_contents('../css/sheet.css');
+
 
 // mPDFオブジェクトを作成
 $mpdf = new \Mpdf\Mpdf();
 
 // HTMLコンテンツをmPDFに書き込む
 // CSS が UTF-8 でない場合は変換しておく
-$stylesheet = mb_convert_encoding($stylesheet, "UTF-8");
-$mpdf->WriteHTML($stylesheet,1);
 $mpdf->WriteHTML($htmlContent);
 
 // PDFとして出力（ブラウザで表示・ダウンロード）

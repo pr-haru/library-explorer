@@ -8,7 +8,7 @@ $htmlFilePath = '../view/index.html';
 
 // ファイルの内容を読み込む
 $htmlContent = file_get_contents($htmlFilePath);
-$stylesheet = file_get_contents('../css/test.css');
+$stylesheet = file_get_contents('../css/sheet.css');
 
 // mPDFオブジェクトを作成
 $mpdf = new \Mpdf\Mpdf();

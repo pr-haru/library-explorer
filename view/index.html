@@ -10,6 +10,15 @@
 </head>
 
 <body>
+
+    <button id="downloadButton">PDF</button>
+    <script>
+        // ボタンがクリックされたときの処理
+        document.getElementById('downloadButton').addEventListener('click', function() {
+            // PHPスクリプトを呼び出す
+            window.location.href = '../index/mpdf.php'; // PHPスクリプトを呼び出し
+        });
+    </script>
     <section class="sheet">
         <div class="row_1">
             <h1 class="text-center">御請求書</h1>
@@ -41,7 +50,7 @@
                     <li>TEL: 00-0000-0000</li>
                     <li>FAX: 00-0000-0000</li>
                 </ul>
-                <img class="stamp" src="stamp.png">
+                <!-- <img class="stamp" src="stamp.png"> -->
             </div>
             <div class="clear-element"></div>
         </div>
